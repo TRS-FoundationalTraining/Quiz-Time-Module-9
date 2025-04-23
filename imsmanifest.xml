@@ -6,7 +6,7 @@
     <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
       <general>
         <title>
-          <langstring xml:lang="x-none">Quiz Time (Module 9)</langstring>
+          <langstring xml:lang="x-none">Quiz Time</langstring>
         </title>
       </general>
       <lifecycle>
@@ -50,11 +50,11 @@
       </rights>
     </lom>
   </metadata>
-  <organizations default="Quiz_Time_(Module_9)_ORG">
-    <organization identifier="Quiz_Time_(Module_9)_ORG">
-      <title>Quiz Time (Module 9)</title>
+  <organizations default="Quiz_Time_ORG">
+    <organization identifier="Quiz_Time_ORG">
+      <title>Quiz Time</title>
       <item identifier="Quiz_Time_SCO" isvisible="true" identifierref="__6rUj9ax8uxi_RES">
-        <title>Quiz Time (Module 9)</title>
+        <title>Quiz Time</title>
       </item>
     </organization>
   </organizations>
@@ -65,6 +65,7 @@
       <file href="mobile/5lppE7fZKTc_P_38_172_432_140.png" />
       <file href="mobile/5V1OIZYaz5P_P_0_0_1401_785.png" />
       <file href="meta.xml" />
+      <file href="story_content/triggers.js" />
       <file href="story_content/user.js" />
       <file href="html5/data/css/output.min.css" />
       <file href="html5/data/js/5njM0s16HXP.js" />
@@ -72,7 +73,6 @@
       <file href="html5/data/js/data.js" />
       <file href="html5/data/js/frame.js" />
       <file href="html5/data/js/paths.js" />
-      <file href="html5/lib/hls/hls.min.js" />
       <file href="html5/lib/scripts/bootstrapper.min.js" />
       <file href="html5/lib/scripts/frame.desktop.min.js" />
       <file href="html5/lib/scripts/frame.mobile.min.js" />
