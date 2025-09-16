@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <!-- Created using Storyline 360 x64 - http://www.articulate.com  -->
-  <!-- version: 3.98.34380.0 -->
+  <!-- version: 3.103.35301.0 -->
   <title>Quiz Time</title>
   <meta http-equiv="x-ua-compatible" content="IE=edge"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no,minimal-ui"/>
@@ -24,11 +24,11 @@
       tinCanPresent: false,
       cmi5Present: false,
       aoSupport: false,
-      scale: 'noscale',
+      scale: 'Scaled',
       captureRc: false,
       browserSize: 'optimal',
       bgColor: '#FFFFFF',
-      features: 'DropInAcc,DropInBase,DropInCore,DropInInteractions,DropInVideo,JsApiBasics,MathExpressions,MorphTransition,MultipleQuizTracking,SetFocusTrigger',
+      features: 'DropInBase,MultipleQuizTracking,PlayerSizeOption',
       themeName: 'unified',
       preloaderColor: '#8C8C8C',
       suppressAnalytics: false,
@@ -36,8 +36,8 @@
       publishSource: 'storyline',
       aid: 'aid|4c5e0523-14ed-462f-b21a-93df102538fa',
       cid: '10f7de06-871c-4fef-9d47-9592e4ae54d5',
-      playerVersion: '3.98.34380.0',
-      publishTimestamp: '2025-04-23T20:17:42.4908468Z',
+      playerVersion: '3.103.35301.0',
+      publishTimestamp: '2025-09-16T16:57:42.4317713Z',
       maxIosVideoElements: 10,
       connectionSettings: { message: 'You%20are%20offline.%20Trying%20to%20reconnect...', useDarkTheme: true, mode: 'disabled' },
       hasFeature: function(feature) {
@@ -62,6 +62,15 @@
       }
 
     };
+
+    if (window.flagsUnderTest != null) {
+      window.globals.features = window.flagsUnderTest.reduce((accum, feature) => {
+        if (!accum.includes(feature)) {
+          accum.push(feature);
+        }
+        return accum;
+      }, window.globals.features.split(',')).join();
+    }
   </script>
   <script>
     var isIe11 = ('ActiveXObject' in window || window.MSBlobBuilder != null)
@@ -73,13 +82,14 @@
   </script>
 
   <script>
-    if (window.globals.hasFeature('NewAiCourseTranslation')) {
+    if (window.globals.hasFeature('Localization')) {
       
       
     }
   </script>
 
   <script src="lms/scormdriver.js" charset="utf-8"></script>
+  
   <script>window.THREE = { };</script>
   
 </head>
@@ -425,7 +435,7 @@
     function disableKeys() {
       if (DS.views && DS.views.nsStack && DS.views.nsStack.length === 1) {
         DS.views.nsStack[0].tabReachable = false
-        DS.views.nsStack[0].updateTabIndex(true, true);
+        DS.views.nsStack[0].updateTabIndex(true);
       }
 
       accStyle.innerHTML = '.acc-shadow-dom { display: none; }';
